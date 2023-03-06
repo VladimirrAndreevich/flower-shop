@@ -1,0 +1,21 @@
+.currencies {
+	display: flex;
+	column-gap: 10px;
+
+	&__radio {
+		display: none;
+	}
+
+	&__name {
+		font-size: toRem(14px);
+		color: var(--color-main);
+
+		opacity: 0.5;
+		cursor: pointer;
+	}
+
+	&__radio:checked ~ &__name {
+		cursor: initial;
+		opacity: 1;
+	}
+}

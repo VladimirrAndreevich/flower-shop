@@ -9,5 +9,47 @@
 body {
 	font-family: $font-main;
 	font-weight: 400;
-	color: $color-white-main;
+	color: var(--color-main);
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+* img {
+	max-width: 100%;
+}
+
+.logo {
+	display: inline-block;
+	&__icon {
+		// values: 	min 68px max 102px
+		// viewport min 320px max 1920px
+		width: clamp(4.25rem, 3.825rem + 2.13vw, 6.375rem);
+
+		// values: 	min 57px max 84px
+		// viewport min 320px max 1920px
+		height: clamp(3.563rem, 3.225rem + 1.69vw, 5.25rem);
+
+		fill: var(--color-main);
+
+		& use {
+			// values: 	min 68px max 102px
+			// viewport min 320px max 1920px
+			width: clamp(4.25rem, 3.825rem + 2.13vw, 6.375rem);
+
+			// values: 	min 57px max 84px
+			// viewport min 320px max 1920px
+			height: clamp(3.563rem, 3.225rem + 1.69vw, 5.25rem);
+		}
+	}
+}
+
+[class*="__container"] {
+	width: 100%;
+	padding: 0 15px;
 }

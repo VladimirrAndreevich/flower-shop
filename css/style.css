@@ -1,3 +1,9 @@
+:root {
+  --color-main: #5b4a58;
+  --color-accent: #6aae55;
+  --color-main-lighter: #6d5b6a;
+}
+
 *,
 ::after,
 ::before {
@@ -7,11 +13,269 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Literal-f", sans-serif;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--color-main);
+}
+body._lock {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+* img {
+  max-width: 100%;
+}
+
+.logo {
+  display: inline-block;
+}
+.logo__icon {
+  width: clamp(4.25rem, 3.825rem + 2.13vw, 6.375rem);
+  height: clamp(3.563rem, 3.225rem + 1.69vw, 5.25rem);
+  fill: var(--color-main);
+}
+.logo__icon use {
+  width: clamp(4.25rem, 3.825rem + 2.13vw, 6.375rem);
+  height: clamp(3.563rem, 3.225rem + 1.69vw, 5.25rem);
+}
+
+[class*=__container] {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@font-face {
+  font-family: "Literal-f";
+  src: url("../fonts/Literal_Light.otf") format("otf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Literal-f";
+  src: url("../fonts/Literal_Regular.otf") format("otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Literal-f";
+  src: url("../fonts/Literal_Bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700;
+}
+.currencies {
+  display: flex;
+  column-gap: 10px;
+}
+.currencies__radio {
+  display: none;
+}
+.currencies__name {
+  font-size: 0.875rem;
+  color: var(--color-main);
+  opacity: 0.5;
+  cursor: pointer;
+}
+.currencies__radio:checked ~ .currencies__name {
+  cursor: initial;
+  opacity: 1;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-  color: green;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  color: var(--color-main);
+}
+
+svg {
+  width: 40px;
+  height: 40px;
+}
+
+.line {
+  fill: none;
+  stroke: var(--color-main);
+  stroke-width: 4;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 4;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
+}
+
+.header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
