@@ -1,0 +1,23 @@
+.location {
+	display: none;
+	align-items: center;
+
+	&__image {
+		width: 15px;
+		height: 19px;
+
+		margin-right: 10px;
+	}
+
+	&__text {
+		font-size: toRem(16px);
+		color: var(--color-main-white);
+	}
+	&__mark {
+		color: var(--color-accent);
+	}
+
+	@media (min-width: 768px) {
+		display: flex;
+	}
+}

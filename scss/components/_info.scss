@@ -1,0 +1,12 @@
+.info {
+	display: flex;
+	align-items: center;
+
+	color: var(--color-main);
+	font-size: toRem(16px);
+	&__icon {
+		width: 10px;
+
+		margin-left: 5px;
+	}
+}

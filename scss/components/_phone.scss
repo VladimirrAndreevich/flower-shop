@@ -1,0 +1,61 @@
+.phone {
+	display: flex;
+	align-items: center;
+	&__image {
+		width: 12px;
+		height: 12px;
+
+		margin-right: 8px;
+
+		@media (min-width: 768px) {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&__name {
+		color: var(--color-main-white);
+		font-size: toRem(8px);
+		font-weight: 700;
+
+		@media (min-width: 768px) {
+			font-size: 10px;
+		}
+	}
+
+	&__list-numbers {
+		@media (min-width: 576px) {
+			gap: 13px;
+		}
+
+		& li:last-child {
+			display: none;
+
+			@media (min-width: 576px) {
+				display: inline-block;
+			}
+		}
+
+		@media (min-width: 576px) {
+			display: flex;
+		}
+	}
+
+	&__number {
+		color: var(--color-main-white);
+		font-size: toRem(14px);
+		font-weight: 700;
+		line-height: 1.1;
+
+		@media (min-width: 768px) {
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		align-self: stretch;
+		padding: 0 15px;
+
+		background-color: var(--color-main-lighter);
+	}
+}

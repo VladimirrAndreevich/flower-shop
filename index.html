@@ -13,11 +13,70 @@
 		<!-- ? The boolean defer attribute on script elements allows the external JavaScript file to run when the DOM is loaded, without delaying page load first. -->
 		<script defer src="js/script.js"></script>
 	</head>
-	<body>
+	<body class="body">
+		<div class="top">
+			<div class="top__container">
+				<div class="location">
+					<svg class="location__image">
+						<use xlink:href="img/icon/icons-sprite.svg#location"></use>
+					</svg>
+					<div class="location__text">
+						<span class="location__mark">г. Владивосток,</span>
+						ул. Пушкинская, 17 А
+					</div>
+				</div>
+
+				<div class="phone">
+					<svg class="phone__image">
+						<use xlink:href="img/icon/icons-sprite.svg#phone"></use>
+					</svg>
+					<div class="phone__wrapper">
+						<div class="phone__name">WhatsApp</div>
+						<ul class="phone__list-numbers">
+							<li>
+								<a href="tel:78083535335" class="phone__number"
+									>+ 7 808 353 53 35</a
+								>
+							</li>
+							<li>
+								<a href="tel:78083535335" class="phone__number"
+									>+ 7 808 353 53 35</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="top__line"></div>
+
+				<div class="cart">
+					<svg class="cart__image">
+						<use xlink:href="img/icon/icons-sprite.svg#purse"></use>
+					</svg>
+					<div class="cart__balance">150 000</div>
+					<div class="cart__currency">руб</div>
+				</div>
+			</div>
+		</div>
+
 		<header class="header">
 			<div class="header__container">
+				<nav class="header__nav nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link">Каталог</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Отзывы</a>
+						</li>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+
 				<button
-					class="menu"
+					class="header__menu menu"
 					onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
 					aria-label="Main Menu"
 				>
@@ -41,7 +100,23 @@
 					</svg>
 				</a>
 
-				<div class="currencies">
+				<div class="header__wrapper">
+					<a href="#" class="header__info info"
+						>Информация для клиента
+						<svg class="info__icon">
+							<use xlink:href="img/icon/icons-sprite.svg#arrow-down"></use>
+						</svg>
+					</a>
+
+					<a href="#" class="header__account">
+						<svg class="header__account-logo">
+							<use xlink:href="img/icon/icons-sprite.svg#account"></use>
+						</svg>
+						<div class="header__account-text">Мои заказы</div>
+					</a>
+				</div>
+
+				<div class="header__currencies currencies">
 					<label class="currencies__label">
 						<input
 							class="currencies__radio"

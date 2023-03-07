@@ -1,0 +1,27 @@
+.cart {
+	display: flex;
+	align-items: center;
+
+	font-size: toRem(14px);
+	color: var(--color-main-white);
+	font-weight: 700;
+	&__image {
+		// values: 	min 10px max 16px
+		// viewport min 320px max 1920px
+		width: clamp(0.625rem, 0.55rem + 0.38vw, 1rem);
+
+		// values: 	min 13px max 20px
+		// viewport min 320px max 1920px
+		height: clamp(0.813rem, 0.725rem + 0.44vw, 1.25rem);
+
+		margin-right: 10px;
+	}
+
+	&__currency {
+		margin-left: 2px;
+	}
+
+	@media (min-width: 768px) {
+		font-size: toRem(16px);
+	}
+}

@@ -1,0 +1,30 @@
+.top {
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		// padding-top: 4px;
+		// padding-bottom: 4px;
+
+		min-height: 35px;
+	}
+	display: flex;
+	align-items: center;
+
+	background-color: var(--color-main);
+
+	&__line {
+		align-self: stretch;
+
+		width: 1px;
+
+		background-color: #e5e5e5;
+
+		opacity: 0.1;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+}

@@ -6,4 +6,92 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__nav {
+		display: none;
+	}
+
+	&__account {
+		display: none;
+	}
+
+	&__info {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		&__container {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+
+			// values: 	min 16px max 20px
+			// viewport min 320px max 1920px
+			column-gap: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+		}
+
+		&__nav {
+			grid-column: 1 / 6;
+		}
+
+		&__logo {
+			display: flex;
+			justify-content: center;
+
+			grid-column: 6 / 8;
+		}
+
+		&__currencies {
+			grid-column: 12 / 13;
+
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		&__menu {
+			display: none;
+		}
+
+		&__nav {
+			display: block;
+		}
+
+		&__account {
+			// grid-column: 10 /12;
+			// width: 115%;
+
+			display: flex;
+			align-items: center;
+
+			color: var(--color-main);
+		}
+
+		&__account-logo {
+			width: 25px;
+			height: 25px;
+
+			margin-right: 10px;
+		}
+
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+
+			grid-column: 8 / 12;
+		}
+
+		&__currencies {
+			flex-direction: column;
+			align-content: flex-end;
+		}
+	}
+
+	@media (min-width: 992px) {
+		&__wrapper {
+			width: 110%;
+			justify-content: space-between;
+		}
+		&__info {
+			display: flex;
+		}
+	}
 }
