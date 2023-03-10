@@ -6,8 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Главная</title>
 
+		<!-- Swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+		/>
+
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- Swiper JS -->
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+		></script>
 
 		<!-- Main JS -->
 		<!-- ? The boolean defer attribute on script elements allows the external JavaScript file to run when the DOM is loaded, without delaying page load first. -->
@@ -144,13 +156,106 @@
 		<main class="main">
 			<section class="advantages">
 				<div class="advatages__container">
-					<ul class="advantages__list">
-						<li class="">
-							<p class="advantages-item__description">
-								<span>Круглосуточная</span> доставка
-							</p>
-						</li>
-					</ul>
+					<div class="swiper advantages__swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide advantages-item">
+								<div class="advantages-item__img">
+									<svg class="advantages-item__img-border">
+										<use
+											xlink:href="img/icon/icons-sprite.svg#advantage-border"
+										></use>
+									</svg>
+									<svg
+										class="advantages-item__img-main advantages-item__img-main_car"
+									>
+										<use xlink:href="img/icon/icons-sprite.svg#car"></use>
+									</svg>
+									<img
+										class="advantages-item__img-garland advantages-item__img-garland_1"
+										src="../img/flowers/flower1.png"
+										alt="венок"
+									/>
+								</div>
+
+								<p class="advantages-item__description">
+									<span>Бесплатная</span> доставка по городу
+								</p>
+							</div>
+
+							<div class="swiper-slide advantages-item">
+								<div class="advantages-item__img">
+									<svg class="advantages-item__img-border">
+										<use
+											xlink:href="img/icon/icons-sprite.svg#advantage-border"
+										></use>
+									</svg>
+									<svg
+										class="advantages-item__img-main advantages-item__img-main_car"
+									>
+										<use xlink:href="img/icon/icons-sprite.svg#postcard"></use>
+									</svg>
+									<img
+										class="advantages-item__img-garland advantages-item__img-garland_2"
+										src="../img/flowers/flower2.png"
+										alt="венок"
+									/>
+								</div>
+
+								<p class="advantages-item__description">
+									Открытка <span>в подарок</span> и фото вручения
+								</p>
+							</div>
+
+							<div class="swiper-slide advantages-item">
+								<div class="advantages-item__img">
+									<svg class="advantages-item__img-border">
+										<use
+											xlink:href="img/icon/icons-sprite.svg#advantage-border"
+										></use>
+									</svg>
+									<svg
+										class="advantages-item__img-main advantages-item__img-main_car"
+									>
+										<use xlink:href="img/icon/icons-sprite.svg#watch"></use>
+									</svg>
+									<img
+										class="advantages-item__img-garland advantages-item__img-garland_1"
+										src="../img/flowers/flower1.png"
+										alt="венок"
+									/>
+								</div>
+
+								<p class="advantages-item__description">
+									<span>Круглосуточная</span> доставка
+								</p>
+							</div>
+
+							<div class="swiper-slide advantages-item">
+								<div class="advantages-item__img">
+									<svg class="advantages-item__img-border">
+										<use
+											xlink:href="img/icon/icons-sprite.svg#advantage-border"
+										></use>
+									</svg>
+									<svg
+										class="advantages-item__img-main advantages-item__img-main_car"
+									>
+										<use xlink:href="img/icon/icons-sprite.svg#percent"></use>
+									</svg>
+									<img
+										class="advantages-item__img-garland advantages-item__img-garland_3"
+										src="../img/flowers/flower3.png"
+										alt="венок"
+									/>
+								</div>
+
+								<p class="advantages-item__description">
+									Накопительная система <span>скидок</span>
+								</p>
+							</div>
+						</div>
+						<div class="advantages__swiper-pagination"></div>
+					</div>
 				</div>
 			</section>
 		</main>

@@ -504,4 +504,87 @@ svg {
 .advantages {
   padding-top: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
   padding-bottom: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
+}
+.advantages__swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.advantages__swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: none;
+  background-image: url(../img/icon/pagination/out.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+}
+.advantages__swiper-pagination .swiper-pagination-bullet-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/icon/pagination/out.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.advantages__swiper-pagination .swiper-pagination-bullet-active::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-image: url(../img/icon/pagination/inner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.advantages-item__description {
+  max-width: 160px;
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+.advantages-item__description span {
+  color: var(--color-accent);
+}
+.advantages-item__img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advantages-item__img-border {
+  width: 90px;
+  height: 90px;
+}
+.advantages-item__img-main {
+  position: absolute;
+}
+.advantages-item__img-main_car {
+  width: 46px;
+  height: 42px;
+}
+.advantages-item__img-garland {
+  position: absolute;
+  max-width: 120%;
+}
+.advantages-item__img-garland_1 {
+  bottom: -35px;
+}
+.advantages-item__img-garland_2 {
+  bottom: -18px;
+}
+.advantages-item__img-garland_3 {
+  bottom: -12px;
+}
+@media (min-width: 768px) {
+  .advantages-item__description {
+    font-size: 1.125rem;
+  }
 }/*# sourceMappingURL=style.css.map */

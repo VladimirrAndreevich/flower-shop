@@ -3,4 +3,104 @@
 	// viewport min 320px max 1920px
 	padding-top: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
 	padding-bottom: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
+
+	&__swiper {
+		&-pagination {
+			display: flex;
+			justify-content: center;
+
+			margin-top: 18px;
+
+			& .swiper-pagination-bullet {
+				width: 10px;
+				height: 10px;
+
+				background: none;
+
+				background-image: url(../img/icon/pagination/out.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				opacity: 1;
+
+				&-active {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					background-image: url(../img/icon/pagination/out.svg);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					&::after {
+						content: "";
+						display: block;
+						width: 6px;
+						height: 6px;
+
+						background-image: url(../img/icon/pagination/inner.svg);
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__description {
+			max-width: 160px;
+			margin-top: 20px;
+
+			font-size: toRem(16px);
+			text-align: center;
+
+			& span {
+				color: var(--color-accent);
+			}
+		}
+		&__img {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&-border {
+				width: 90px;
+				height: 90px;
+			}
+			&-main {
+				position: absolute;
+
+				&_car {
+					width: 46px;
+					height: 42px;
+				}
+			}
+			&-garland {
+				position: absolute;
+				max-width: 120%;
+				&_1 {
+					bottom: -35px;
+				}
+				&_2 {
+					bottom: -18px;
+				}
+				&_3 {
+					bottom: -12px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		&-item {
+			&__description {
+				font-size: toRem(18px);
+			}
+		}
+	}
 }
