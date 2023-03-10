@@ -3,12 +3,13 @@
 	padding-bottom: 15px;
 	&__container {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__nav {
 		display: none;
+		padding-right: 20px;
 	}
 
 	&__account {
@@ -16,6 +17,10 @@
 	}
 
 	&__info {
+		display: none;
+	}
+
+	&__wrapper {
 		display: none;
 	}
 

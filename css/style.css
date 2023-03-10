@@ -407,16 +407,20 @@ svg {
 }
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .header__nav {
   display: none;
+  padding-right: 20px;
 }
 .header__account {
   display: none;
 }
 .header__info {
+  display: none;
+}
+.header__wrapper {
   display: none;
 }
 @media (min-width: 768px) {
@@ -495,4 +499,9 @@ svg {
   .top__line {
     display: none;
   }
+}
+
+.advantages {
+  padding-top: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
+  padding-bottom: clamp(2.188rem, 1.375rem + 4.06vw, 6.25rem);
 }/*# sourceMappingURL=style.css.map */
